@@ -32,7 +32,7 @@ namespace StockTracking
             this.label1 = new System.Windows.Forms.Label();
             this.txtBCategoryName = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,23 +63,23 @@ namespace StockTracking
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // btnCerrar
+            // btnClose
             // 
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(179, 95);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(128, 30);
-            this.btnCerrar.TabIndex = 3;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(179, 95);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(128, 30);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "Cerrar";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // FrmCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(324, 135);
-            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtBCategoryName);
             this.Controls.Add(this.label1);
@@ -96,7 +96,7 @@ namespace StockTracking
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBCategoryName;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 
