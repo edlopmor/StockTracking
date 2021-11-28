@@ -87,16 +87,18 @@ namespace StockTracking
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(804, 133);
+            this.panel1.Size = new System.Drawing.Size(1114, 164);
             this.panel1.TabIndex = 0;
             // 
             // btnClean
             // 
             this.btnClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClean.Location = new System.Drawing.Point(692, 103);
+            this.btnClean.Location = new System.Drawing.Point(923, 127);
+            this.btnClean.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(105, 23);
+            this.btnClean.Size = new System.Drawing.Size(140, 28);
             this.btnClean.TabIndex = 15;
             this.btnClean.Text = "Limpiar";
             this.btnClean.UseVisualStyleBackColor = true;
@@ -104,9 +106,10 @@ namespace StockTracking
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(480, 103);
+            this.btnSearch.Location = new System.Drawing.Point(640, 127);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(105, 23);
+            this.btnSearch.Size = new System.Drawing.Size(140, 28);
             this.btnSearch.TabIndex = 14;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -114,9 +117,10 @@ namespace StockTracking
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(350, 62);
+            this.textBox1.Location = new System.Drawing.Point(467, 76);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 26);
+            this.textBox1.Size = new System.Drawing.Size(164, 26);
             this.textBox1.TabIndex = 13;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -124,7 +128,8 @@ namespace StockTracking
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(276, 65);
+            this.label4.Location = new System.Drawing.Point(368, 80);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 12;
@@ -136,9 +141,11 @@ namespace StockTracking
             this.groupBox3.Controls.Add(this.rbStockLess);
             this.groupBox3.Controls.Add(this.rbStockEqual);
             this.groupBox3.Controls.Add(this.rbStockMore);
-            this.groupBox3.Location = new System.Drawing.Point(480, 53);
+            this.groupBox3.Location = new System.Drawing.Point(640, 65);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(317, 44);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(423, 54);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cantidad en almacen";
@@ -148,9 +155,11 @@ namespace StockTracking
             this.groupBox4.Controls.Add(this.radioButton4);
             this.groupBox4.Controls.Add(this.radioButton5);
             this.groupBox4.Controls.Add(this.radioButton6);
-            this.groupBox4.Location = new System.Drawing.Point(3, 46);
+            this.groupBox4.Location = new System.Drawing.Point(4, 57);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(317, 47);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(423, 58);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Precio";
@@ -158,9 +167,10 @@ namespace StockTracking
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(199, 19);
+            this.radioButton4.Location = new System.Drawing.Point(265, 23);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(89, 17);
+            this.radioButton4.Size = new System.Drawing.Size(108, 20);
             this.radioButton4.TabIndex = 2;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Menos precio";
@@ -169,9 +179,10 @@ namespace StockTracking
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(17, 19);
+            this.radioButton5.Location = new System.Drawing.Point(23, 23);
+            this.radioButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(48, 17);
+            this.radioButton5.Size = new System.Drawing.Size(55, 20);
             this.radioButton5.TabIndex = 1;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Igual";
@@ -180,9 +191,10 @@ namespace StockTracking
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(108, 19);
+            this.radioButton6.Location = new System.Drawing.Point(144, 23);
+            this.radioButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(48, 17);
+            this.radioButton6.Size = new System.Drawing.Size(55, 20);
             this.radioButton6.TabIndex = 0;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Mas ";
@@ -191,9 +203,10 @@ namespace StockTracking
             // rbStockLess
             // 
             this.rbStockLess.AutoSize = true;
-            this.rbStockLess.Location = new System.Drawing.Point(199, 19);
+            this.rbStockLess.Location = new System.Drawing.Point(265, 23);
+            this.rbStockLess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbStockLess.Name = "rbStockLess";
-            this.rbStockLess.Size = new System.Drawing.Size(57, 17);
+            this.rbStockLess.Size = new System.Drawing.Size(67, 20);
             this.rbStockLess.TabIndex = 2;
             this.rbStockLess.TabStop = true;
             this.rbStockLess.Text = "Menos";
@@ -202,9 +215,10 @@ namespace StockTracking
             // rbStockEqual
             // 
             this.rbStockEqual.AutoSize = true;
-            this.rbStockEqual.Location = new System.Drawing.Point(17, 19);
+            this.rbStockEqual.Location = new System.Drawing.Point(23, 23);
+            this.rbStockEqual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbStockEqual.Name = "rbStockEqual";
-            this.rbStockEqual.Size = new System.Drawing.Size(48, 17);
+            this.rbStockEqual.Size = new System.Drawing.Size(55, 20);
             this.rbStockEqual.TabIndex = 1;
             this.rbStockEqual.TabStop = true;
             this.rbStockEqual.Text = "Igual";
@@ -213,9 +227,10 @@ namespace StockTracking
             // rbStockMore
             // 
             this.rbStockMore.AutoSize = true;
-            this.rbStockMore.Location = new System.Drawing.Point(108, 19);
+            this.rbStockMore.Location = new System.Drawing.Point(144, 23);
+            this.rbStockMore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbStockMore.Name = "rbStockMore";
-            this.rbStockMore.Size = new System.Drawing.Size(48, 17);
+            this.rbStockMore.Size = new System.Drawing.Size(55, 20);
             this.rbStockMore.TabIndex = 0;
             this.rbStockMore.TabStop = true;
             this.rbStockMore.Text = "Mas ";
@@ -227,9 +242,11 @@ namespace StockTracking
             this.groupBox1.Controls.Add(this.rbPriceLess);
             this.groupBox1.Controls.Add(this.rbPriceEqual);
             this.groupBox1.Controls.Add(this.rbPriceMore);
-            this.groupBox1.Location = new System.Drawing.Point(480, 3);
+            this.groupBox1.Location = new System.Drawing.Point(640, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(317, 44);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(423, 54);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Precio";
@@ -239,9 +256,11 @@ namespace StockTracking
             this.groupBox2.Controls.Add(this.radioButton1);
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Location = new System.Drawing.Point(3, 46);
+            this.groupBox2.Location = new System.Drawing.Point(4, 57);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(317, 47);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(423, 58);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Precio";
@@ -249,9 +268,10 @@ namespace StockTracking
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(199, 19);
+            this.radioButton1.Location = new System.Drawing.Point(265, 23);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(89, 17);
+            this.radioButton1.Size = new System.Drawing.Size(108, 20);
             this.radioButton1.TabIndex = 2;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Menos precio";
@@ -260,9 +280,10 @@ namespace StockTracking
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(17, 19);
+            this.radioButton2.Location = new System.Drawing.Point(23, 23);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 17);
+            this.radioButton2.Size = new System.Drawing.Size(55, 20);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Igual";
@@ -271,9 +292,10 @@ namespace StockTracking
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(108, 19);
+            this.radioButton3.Location = new System.Drawing.Point(144, 23);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(48, 17);
+            this.radioButton3.Size = new System.Drawing.Size(55, 20);
             this.radioButton3.TabIndex = 0;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Mas ";
@@ -282,9 +304,10 @@ namespace StockTracking
             // rbPriceLess
             // 
             this.rbPriceLess.AutoSize = true;
-            this.rbPriceLess.Location = new System.Drawing.Point(199, 19);
+            this.rbPriceLess.Location = new System.Drawing.Point(265, 23);
+            this.rbPriceLess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbPriceLess.Name = "rbPriceLess";
-            this.rbPriceLess.Size = new System.Drawing.Size(57, 17);
+            this.rbPriceLess.Size = new System.Drawing.Size(67, 20);
             this.rbPriceLess.TabIndex = 2;
             this.rbPriceLess.TabStop = true;
             this.rbPriceLess.Text = "Menos";
@@ -293,9 +316,10 @@ namespace StockTracking
             // rbPriceEqual
             // 
             this.rbPriceEqual.AutoSize = true;
-            this.rbPriceEqual.Location = new System.Drawing.Point(17, 19);
+            this.rbPriceEqual.Location = new System.Drawing.Point(23, 23);
+            this.rbPriceEqual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbPriceEqual.Name = "rbPriceEqual";
-            this.rbPriceEqual.Size = new System.Drawing.Size(48, 17);
+            this.rbPriceEqual.Size = new System.Drawing.Size(55, 20);
             this.rbPriceEqual.TabIndex = 1;
             this.rbPriceEqual.TabStop = true;
             this.rbPriceEqual.Text = "Igual";
@@ -304,9 +328,10 @@ namespace StockTracking
             // rbPriceMore
             // 
             this.rbPriceMore.AutoSize = true;
-            this.rbPriceMore.Location = new System.Drawing.Point(108, 19);
+            this.rbPriceMore.Location = new System.Drawing.Point(144, 23);
+            this.rbPriceMore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbPriceMore.Name = "rbPriceMore";
-            this.rbPriceMore.Size = new System.Drawing.Size(48, 17);
+            this.rbPriceMore.Size = new System.Drawing.Size(55, 20);
             this.rbPriceMore.TabIndex = 0;
             this.rbPriceMore.TabStop = true;
             this.rbPriceMore.Text = "Mas ";
@@ -315,9 +340,10 @@ namespace StockTracking
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(350, 6);
+            this.txtPrice.Location = new System.Drawing.Point(467, 7);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(124, 26);
+            this.txtPrice.Size = new System.Drawing.Size(164, 26);
             this.txtPrice.TabIndex = 9;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
@@ -326,7 +352,8 @@ namespace StockTracking
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(276, 9);
+            this.label2.Location = new System.Drawing.Point(368, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 20);
             this.label2.TabIndex = 8;
@@ -336,16 +363,18 @@ namespace StockTracking
             // 
             this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(137, 61);
+            this.cmbCategory.Location = new System.Drawing.Point(183, 75);
+            this.cmbCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(133, 28);
+            this.cmbCategory.Size = new System.Drawing.Size(176, 28);
             this.cmbCategory.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 65);
+            this.label3.Location = new System.Drawing.Point(4, 80);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 6;
@@ -354,16 +383,18 @@ namespace StockTracking
             // txtProductName
             // 
             this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductName.Location = new System.Drawing.Point(137, 6);
+            this.txtProductName.Location = new System.Drawing.Point(183, 7);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(133, 26);
+            this.txtProductName.Size = new System.Drawing.Size(176, 26);
             this.txtProductName.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Location = new System.Drawing.Point(4, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 20);
             this.label1.TabIndex = 2;
@@ -376,17 +407,19 @@ namespace StockTracking
             this.panel2.Controls.Add(this.btnCerrar);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 384);
+            this.panel2.Location = new System.Drawing.Point(0, 441);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(804, 77);
+            this.panel2.Size = new System.Drawing.Size(1114, 95);
             this.panel2.TabIndex = 1;
             // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(442, 13);
+            this.btnDelete.Location = new System.Drawing.Point(589, 16);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(128, 51);
+            this.btnDelete.Size = new System.Drawing.Size(171, 63);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Borrar";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -394,9 +427,10 @@ namespace StockTracking
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(204, 13);
+            this.btnUpdate.Location = new System.Drawing.Point(272, 16);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(128, 51);
+            this.btnUpdate.Size = new System.Drawing.Size(171, 63);
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -404,9 +438,10 @@ namespace StockTracking
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(669, 13);
+            this.btnCerrar.Location = new System.Drawing.Point(892, 16);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(128, 51);
+            this.btnCerrar.Size = new System.Drawing.Size(171, 63);
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -414,9 +449,10 @@ namespace StockTracking
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(3, 13);
+            this.btnSave.Location = new System.Drawing.Point(4, 16);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(128, 51);
+            this.btnSave.Size = new System.Drawing.Size(171, 63);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -426,19 +462,21 @@ namespace StockTracking
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 133);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 164);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(804, 251);
+            this.dataGridView1.Size = new System.Drawing.Size(1114, 277);
             this.dataGridView1.TabIndex = 2;
             // 
             // FrmProductList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 461);
+            this.ClientSize = new System.Drawing.Size(1114, 536);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmProductList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de productos";
