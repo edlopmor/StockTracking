@@ -117,26 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="2093655_box_logistic_package_present_product_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2093655_box_logistic_package_present_product_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4230539_audience_customer_target_team_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4230539_audience_customer_target_team_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="326606_delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\326606_delete_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="7898461_sales_business_finance_office_marketing_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7898461_sales_business_finance_office_marketing_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="103434_category_edit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\103434_category_edit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="7830737_warehouse_storage_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7830737_warehouse_storage_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2639810_exit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2639810_exit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

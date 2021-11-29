@@ -40,33 +40,32 @@ namespace StockTracking
             this.txtSalesAmount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.dataGridProducts = new System.Windows.Forms.DataGridView();
             this.dataGridViewCutomers = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxCustomerSearch = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridProducts = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCutomers)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProducts)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(8, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 20);
             this.label1.TabIndex = 3;
@@ -75,28 +74,25 @@ namespace StockTracking
             // txtCustomerName
             // 
             this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(175, 6);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCustomerName.Location = new System.Drawing.Point(131, 5);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(198, 26);
+            this.txtCustomerName.Size = new System.Drawing.Size(150, 26);
             this.txtCustomerName.TabIndex = 2;
             // 
             // txtProductName
             // 
             this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductName.Location = new System.Drawing.Point(175, 38);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProductName.Location = new System.Drawing.Point(131, 31);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.ReadOnly = true;
-            this.txtProductName.Size = new System.Drawing.Size(198, 26);
+            this.txtProductName.Size = new System.Drawing.Size(150, 26);
             this.txtProductName.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 41);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(8, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 20);
             this.label2.TabIndex = 4;
@@ -105,19 +101,17 @@ namespace StockTracking
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(175, 69);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Location = new System.Drawing.Point(131, 56);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(198, 26);
+            this.txtPrice.Size = new System.Drawing.Size(150, 26);
             this.txtPrice.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 72);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(8, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 6;
@@ -126,19 +120,17 @@ namespace StockTracking
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(175, 105);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(131, 85);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(198, 26);
+            this.textBox1.Size = new System.Drawing.Size(150, 26);
             this.textBox1.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 108);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(8, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 14;
@@ -147,10 +139,9 @@ namespace StockTracking
             // txtSalesAmount
             // 
             this.txtSalesAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalesAmount.Location = new System.Drawing.Point(175, 136);
-            this.txtSalesAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSalesAmount.Location = new System.Drawing.Point(131, 110);
             this.txtSalesAmount.Name = "txtSalesAmount";
-            this.txtSalesAmount.Size = new System.Drawing.Size(198, 26);
+            this.txtSalesAmount.Size = new System.Drawing.Size(150, 26);
             this.txtSalesAmount.TabIndex = 17;
             this.txtSalesAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalesAmount_KeyPress);
             // 
@@ -158,8 +149,7 @@ namespace StockTracking
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 139);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(8, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 20);
             this.label5.TabIndex = 16;
@@ -170,10 +160,67 @@ namespace StockTracking
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(507, 0);
+            this.panel1.Location = new System.Drawing.Point(380, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 568);
+            this.panel1.Size = new System.Drawing.Size(196, 462);
             this.panel1.TabIndex = 18;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridViewCutomers);
+            this.groupBox2.Controls.Add(this.panel3);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 193);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(196, 269);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Clientes";
+            // 
+            // dataGridViewCutomers
+            // 
+            this.dataGridViewCutomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCutomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCutomers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewCutomers.Location = new System.Drawing.Point(2, 64);
+            this.dataGridViewCutomers.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewCutomers.Name = "dataGridViewCutomers";
+            this.dataGridViewCutomers.ReadOnly = true;
+            this.dataGridViewCutomers.RowTemplate.Height = 24;
+            this.dataGridViewCutomers.Size = new System.Drawing.Size(192, 203);
+            this.dataGridViewCutomers.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.textBoxCustomerSearch);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(2, 15);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(192, 49);
+            this.panel3.TabIndex = 0;
+            // 
+            // textBoxCustomerSearch
+            // 
+            this.textBoxCustomerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCustomerSearch.Location = new System.Drawing.Point(6, 20);
+            this.textBoxCustomerSearch.Name = "textBoxCustomerSearch";
+            this.textBoxCustomerSearch.Size = new System.Drawing.Size(179, 26);
+            this.textBoxCustomerSearch.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 20);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Nombre cliente";
             // 
             // groupBox1
             // 
@@ -181,116 +228,63 @@ namespace StockTracking
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(261, 237);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(196, 193);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Producto";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridViewCutomers);
-            this.groupBox2.Controls.Add(this.panel3);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 237);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(261, 331);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Clientes";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.cmbCategory);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 18);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 62);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.textBoxCustomerSearch);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 18);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(255, 60);
-            this.panel3.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(4, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Categoria";
-            // 
-            // cmbCategory
-            // 
-            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(8, 24);
-            this.cmbCategory.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(237, 28);
-            this.cmbCategory.TabIndex = 6;
             // 
             // dataGridProducts
             // 
             this.dataGridProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridProducts.Location = new System.Drawing.Point(3, 80);
+            this.dataGridProducts.Location = new System.Drawing.Point(2, 65);
+            this.dataGridProducts.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridProducts.Name = "dataGridProducts";
             this.dataGridProducts.ReadOnly = true;
             this.dataGridProducts.RowTemplate.Height = 24;
-            this.dataGridProducts.Size = new System.Drawing.Size(255, 154);
+            this.dataGridProducts.Size = new System.Drawing.Size(192, 126);
             this.dataGridProducts.TabIndex = 1;
             // 
-            // dataGridViewCutomers
+            // panel2
             // 
-            this.dataGridViewCutomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewCutomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCutomers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewCutomers.Location = new System.Drawing.Point(3, 78);
-            this.dataGridViewCutomers.Name = "dataGridViewCutomers";
-            this.dataGridViewCutomers.ReadOnly = true;
-            this.dataGridViewCutomers.RowTemplate.Height = 24;
-            this.dataGridViewCutomers.Size = new System.Drawing.Size(255, 250);
-            this.dataGridViewCutomers.TabIndex = 1;
+            this.panel2.Controls.Add(this.cmbCategory);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(2, 15);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(192, 50);
+            this.panel2.TabIndex = 0;
             // 
-            // label7
+            // cmbCategory
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(4, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Nombre cliente";
+            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(6, 20);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(179, 28);
+            this.cmbCategory.TabIndex = 6;
             // 
-            // textBoxCustomerSearch
+            // label6
             // 
-            this.textBoxCustomerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustomerSearch.Location = new System.Drawing.Point(8, 24);
-            this.textBoxCustomerSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxCustomerSearch.Name = "textBoxCustomerSearch";
-            this.textBoxCustomerSearch.Size = new System.Drawing.Size(237, 26);
-            this.textBoxCustomerSearch.TabIndex = 5;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Categoria";
             // 
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(217, 528);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar.Location = new System.Drawing.Point(163, 429);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(143, 37);
+            this.btnCerrar.Size = new System.Drawing.Size(107, 30);
             this.btnCerrar.TabIndex = 20;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -299,19 +293,18 @@ namespace StockTracking
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(0, 528);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(0, 429);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(143, 37);
+            this.btnSave.Size = new System.Drawing.Size(107, 30);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // FrmSales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 568);
+            this.ClientSize = new System.Drawing.Size(576, 462);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel1);
@@ -325,18 +318,19 @@ namespace StockTracking
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCustomerName);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCutomers)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCutomers)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

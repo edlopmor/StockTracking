@@ -120,6 +120,12 @@
     <Compile Include="FrmDeleted.Designer.cs">
       <DependentUpon>FrmDeleted.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     <EmbeddedResource Include="FrmDeleted.resx">
       <DependentUpon>FrmDeleted.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +203,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="DAL\DataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -227,6 +237,13 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\2639810_exit_icon.png" />
+    <None Include="Resources\326606_delete_icon.png" />
+    <None Include="Resources\103434_category_edit_icon.png" />
+    <None Include="Resources\4230539_audience_customer_target_team_icon.png" />
+    <None Include="Resources\7830737_warehouse_storage_icon.png" />
+    <None Include="Resources\2093655_box_logistic_package_present_product_icon.png" />
+    <None Include="Resources\7898461_sales_business_finance_office_marketing_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
