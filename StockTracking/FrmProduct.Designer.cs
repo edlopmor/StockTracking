@@ -115,6 +115,7 @@ namespace StockTracking
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmProduct
             // 
@@ -132,6 +133,7 @@ namespace StockTracking
             this.Name = "FrmProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar producto";
+            this.Load += new System.EventHandler(this.FrmProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

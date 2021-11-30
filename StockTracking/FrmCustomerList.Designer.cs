@@ -70,6 +70,7 @@ namespace StockTracking
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(213, 26);
             this.txtCustomerName.TabIndex = 2;
+            this.txtCustomerName.TextChanged += new System.EventHandler(this.txtCustomerName_TextChanged);
             // 
             // panel2
             // 

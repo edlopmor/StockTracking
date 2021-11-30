@@ -34,6 +34,8 @@ namespace StockTracking
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            dto = bll.select();
+            dataGridViewCustomers.DataSource = dto.Customers; 
         }
 
         private void FrmCustomerList_Load(object sender, EventArgs e)
@@ -42,6 +44,12 @@ namespace StockTracking
             dataGridViewCustomers.DataSource = dto.Customers;
             dataGridViewCustomers.Columns[0].Visible = false;
             dataGridViewCustomers.Columns[1].HeaderText = "Nombre customers";
+        }
+
+        private void txtCustomerName_TextChanged(object sender, EventArgs e)
+        {
+            List<CustomerDetailDTO> list = dto.Customers;
+            list = list.Where(x => x.CustomerName.Contains(txtCustomerName.Text)).ToList();
         }
     }
 }
