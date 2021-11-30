@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockTracking.BLL;
+
+using StockTracking.DAL.DTO;
 
 namespace StockTracking
 {
     public partial class FrmCustomer : Form
     {
+        CustomerBLL bll = new CustomerBLL();
         public FrmCustomer()
         {
             InitializeComponent();
@@ -20,6 +24,27 @@ namespace StockTracking
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtCustomerName.Text.Trim() == "")
+                MessageBox.Show("Por favor rellene un nombre de cliente");
+            else
+            {
+                CustomerDetailDTO customer = new CustomerDetailDTO();
+                customer.CustomerName = txtCustomerName.Text;
+                if (bll.Insert(customer))
+                {
+                    MessageBox.Show("Cliente añadido con exito");
+                    txtCustomerName.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido añadir el cliente");
+                }
+            }
+                
         }
     }
 }
