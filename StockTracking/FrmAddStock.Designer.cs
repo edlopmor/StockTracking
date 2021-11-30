@@ -38,7 +38,7 @@ namespace StockTracking
             this.label2 = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -67,6 +67,7 @@ namespace StockTracking
             this.dataGridViewProducts.ReadOnly = true;
             this.dataGridViewProducts.Size = new System.Drawing.Size(289, 271);
             this.dataGridViewProducts.TabIndex = 1;
+            this.dataGridViewProducts.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducts_RowEnter);
             // 
             // panel2
             // 
@@ -86,6 +87,7 @@ namespace StockTracking
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(262, 28);
             this.cmbCategory.TabIndex = 9;
+            this.cmbCategory.SelectedIndexChanged += new System.EventHandler(this.cmbCategory_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -135,14 +137,14 @@ namespace StockTracking
             this.label1.TabIndex = 10;
             this.label1.Text = "Nombre producto";
             // 
-            // textBox1
+            // txtQuantity
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(151, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 26);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.Location = new System.Drawing.Point(151, 71);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(199, 26);
+            this.txtQuantity.TabIndex = 15;
+            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label4
             // 
@@ -174,6 +176,7 @@ namespace StockTracking
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmAddStock
             // 
@@ -182,7 +185,7 @@ namespace StockTracking
             this.ClientSize = new System.Drawing.Size(654, 390);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label2);
@@ -192,6 +195,7 @@ namespace StockTracking
             this.Name = "FrmAddStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir cantidad";
+            this.Load += new System.EventHandler(this.FrmAddStock_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -212,7 +216,7 @@ namespace StockTracking
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
