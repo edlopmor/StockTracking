@@ -18,11 +18,13 @@ namespace StockTracking
 
         ProductBLL bll = new ProductBLL();
         ProductDTO dto = new ProductDTO();
-        ProductDetailDTO productoSeleccionado = new ProductDetailDTO();
+        public ProductDetailDTO productoSeleccionado = new ProductDetailDTO();
 
         bool comboFull = false;
         //Variable que nos servira para evitar que por defecto el grid row enter cargue el primer objeto. 
-        bool primeraCarga = false; 
+        bool primeraCarga = false;
+        //Variable para saber si es una actualización. Viene desde la pantalla inicial.
+        public bool isUpdate = false;
         public FrmAddStock()
         {
             InitializeComponent();
@@ -56,6 +58,12 @@ namespace StockTracking
 
             if (dto.Categories.Count > 0)
                 comboFull = true;
+            if (isUpdate)
+            {
+                cmbCategory.SelectedValue = productoSeleccionado.CategoryName;
+                txtPrice.Text = productoSeleccionado.Price.ToString();
+                txtProductName.Text = productoSeleccionado.ProductName;
+            }
             primeraCarga = true; 
         }
         

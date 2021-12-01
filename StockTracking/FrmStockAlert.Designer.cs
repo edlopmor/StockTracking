@@ -32,12 +32,14 @@ namespace StockTracking
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnOk = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGiveMeStock = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnGiveMeStock);
             this.panel1.Controls.Add(this.btnOk);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 332);
@@ -48,7 +50,7 @@ namespace StockTracking
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(182, 6);
+            this.btnOk.Location = new System.Drawing.Point(178, 5);
             this.btnOk.Margin = new System.Windows.Forms.Padding(2);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(66, 32);
@@ -69,6 +71,17 @@ namespace StockTracking
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(431, 332);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
+            // 
+            // btnGiveMeStock
+            // 
+            this.btnGiveMeStock.Location = new System.Drawing.Point(297, 5);
+            this.btnGiveMeStock.Name = "btnGiveMeStock";
+            this.btnGiveMeStock.Size = new System.Drawing.Size(131, 30);
+            this.btnGiveMeStock.TabIndex = 1;
+            this.btnGiveMeStock.Text = "Modificar stock";
+            this.btnGiveMeStock.UseVisualStyleBackColor = true;
+            this.btnGiveMeStock.Click += new System.EventHandler(this.btnGiveMeStock_Click);
             // 
             // FrmStockAlert
             // 
@@ -93,5 +106,6 @@ namespace StockTracking
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnGiveMeStock;
     }
 }

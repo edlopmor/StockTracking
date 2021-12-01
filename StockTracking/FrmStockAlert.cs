@@ -16,6 +16,8 @@ namespace StockTracking
     {
         ProductBLL bll = new ProductBLL();
         ProductDTO dto = new ProductDTO();
+        ProductDetailDTO productoSelecionado = new ProductDetailDTO();
+        bool primeraCarga = true;
         public FrmStockAlert()
         {
             InitializeComponent();
@@ -44,12 +46,37 @@ namespace StockTracking
             dataGridView1.Columns[4].Visible = false; //Precio
             dataGridView1.Columns[5].Visible = false; //Category ID 
 
+            btnGiveMeStock.Visible = false; 
             if (dto.Products.Count == 0)
             {
                 FrmMain frm = new FrmMain();
                 this.Hide();
                 frm.ShowDialog();
             }
+            primeraCarga = false;
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!primeraCarga)
+            {
+                productoSelecionado.ID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                productoSelecionado.ProductName = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                productoSelecionado.CategoryName = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                productoSelecionado.StockAmount = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+                productoSelecionado.Price = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString());
+                productoSelecionado.CategoryID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+                btnGiveMeStock.Visible = true;
+            }
+        }
+
+        private void btnGiveMeStock_Click(object sender, EventArgs e)
+        {
+            FrmAddStock frm = new FrmAddStock();
+            frm.isUpdate = true;
+            frm.productoSeleccionado = productoSelecionado;
+            this.Hide();
+            frm.ShowDialog();
         }
     }
 }

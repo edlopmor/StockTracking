@@ -38,7 +38,11 @@ namespace StockTracking.BLL
 
         public bool Update(CustomerDetailDTO entity)
         {
-            throw new NotImplementedException();
+            CUSTOMER customer = new CUSTOMER();
+            customer.IdCustomer = entity.ID;
+            customer.customerName = entity.CustomerName;
+
+            return dao.Update(customer);
         }
     }
 }

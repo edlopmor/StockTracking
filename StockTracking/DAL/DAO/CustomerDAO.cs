@@ -52,7 +52,18 @@ namespace StockTracking.DAL.DAO
 
         public bool Update(CUSTOMER entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                CUSTOMER customer = db.CUSTOMERS.First(x => x.IdCustomer == entity.IdCustomer);
+                customer.customerName = entity.customerName;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

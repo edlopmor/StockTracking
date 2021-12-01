@@ -16,6 +16,9 @@ namespace StockTracking
     {
         CategoryDTO dto = new CategoryDTO();
         CategoryBLL bll = new CategoryBLL();
+        CategoryDetailDTO categoriaSeleccionada = new CategoryDetailDTO();
+
+        bool primeraCarga = true ;
         public FrmCategoryList()
         {
             InitializeComponent();
@@ -39,11 +42,13 @@ namespace StockTracking
 
         private void FrmCategoryList_Load(object sender, EventArgs e)
         {
+            
             dto = bll.select();
             dataGridViewEmployees.DataSource = dto.categories;
 
             dataGridViewEmployees.Columns[0].Visible = false;
             dataGridViewEmployees.Columns[1].HeaderText = "Nombre categoria";
+            primeraCarga = false; 
             
         }
 
@@ -52,6 +57,38 @@ namespace StockTracking
             List<CategoryDetailDTO> list = dto.categories;
             list = list.Where(x => x.CategoryName.Contains(txtBCategoryName.Text)).ToList();
             dataGridViewEmployees.DataSource = list;
+        }
+
+        private void dataGridViewEmployees_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!primeraCarga)
+            {
+                categoriaSeleccionada = new CategoryDetailDTO();
+                categoriaSeleccionada.CategoryName = dataGridViewEmployees.Rows[e.RowIndex].Cells[1].Value.ToString();
+                categoriaSeleccionada.ID = Convert.ToInt32(dataGridViewEmployees.Rows[e.RowIndex].Cells[0].Value.ToString());
+            }
+            
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (categoriaSeleccionada.ID == 0)
+                MessageBox.Show("Debe seleccionar una categoria");
+            else
+            {
+                FrmCategory frm = new FrmCategory();
+                frm.categoriaSeleccionada = categoriaSeleccionada;
+                frm.isUpdate = true;
+                this.Hide();
+                frm.ShowDialog();
+                this.Visible = true;
+                //Refrescamos la tabla tras realizar la actualizacion 
+                bll = new CategoryBLL();
+                dto = bll.select();
+                dataGridViewEmployees.DataSource = dto.categories;
+            }
+            
+
         }
     }
 }

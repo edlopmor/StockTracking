@@ -103,6 +103,7 @@ namespace StockTracking
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnCerrar
             // 
@@ -136,6 +137,7 @@ namespace StockTracking
             this.dataGridViewEmployees.ReadOnly = true;
             this.dataGridViewEmployees.Size = new System.Drawing.Size(836, 319);
             this.dataGridViewEmployees.TabIndex = 2;
+            this.dataGridViewEmployees.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEmployees_RowEnter);
             // 
             // FrmCategoryList
             // 

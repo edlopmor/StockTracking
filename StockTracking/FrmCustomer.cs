@@ -16,6 +16,9 @@ namespace StockTracking
     public partial class FrmCustomer : Form
     {
         CustomerBLL bll = new CustomerBLL();
+        //Proviene de la pantalla FrmCustomerList; 
+        public CustomerDetailDTO customerSeleccionado = new CustomerDetailDTO();
+        public bool isUpdate = false; 
         public FrmCustomer()
         {
             InitializeComponent();
@@ -32,19 +35,41 @@ namespace StockTracking
                 MessageBox.Show("Por favor rellene un nombre de cliente");
             else
             {
-                CustomerDetailDTO customer = new CustomerDetailDTO();
-                customer.CustomerName = txtCustomerName.Text;
-                if (bll.Insert(customer))
+                if (!isUpdate) //Añadir nuevo cliente
                 {
-                    MessageBox.Show("Cliente añadido con exito");
-                    txtCustomerName.Clear();
+                    CustomerDetailDTO customer = new CustomerDetailDTO();
+                    customer.CustomerName = txtCustomerName.Text;
+                    if (bll.Insert(customer))
+                    {
+                        MessageBox.Show("Cliente añadido con exito");
+                        txtCustomerName.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido añadir el cliente");
+                    }
                 }
-                else
+                else //Actualizar cliente
                 {
-                    MessageBox.Show("No se ha podido añadir el cliente");
+                    customerSeleccionado.CustomerName = txtCustomerName.Text;
+                    if(bll.Update(customerSeleccionado))
+                    {
+                        MessageBox.Show("Actualizado cliente satisfactoriamente");
+                        this.Close();
+                    }    
                 }
+                
             }
                 
+        }
+
+        private void FrmCustomer_Load(object sender, EventArgs e)
+        {
+            if (isUpdate)
+            {
+                btnSave.Text = "Actualizar";
+                txtCustomerName.Text = customerSeleccionado.CustomerName;
+            }
         }
     }
 }

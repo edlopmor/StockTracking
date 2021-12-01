@@ -76,7 +76,7 @@ namespace StockTracking.DAL.DAO
         {
             try
             {
-                //TO DO Categorias 
+                
                 PRODUCT product = db.PRODUCTS.First(x => x.IdProduct == entity.IdProduct);
                 if (entity.categoryId != 0)
                 {

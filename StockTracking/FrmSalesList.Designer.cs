@@ -32,21 +32,21 @@ namespace StockTracking
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBoxDate = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFinish = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBoxSalesAmount = new System.Windows.Forms.TextBox();
+            this.txtBoxSalesAmount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.rbStockLess = new System.Windows.Forms.RadioButton();
-            this.rbStockEqual = new System.Windows.Forms.RadioButton();
-            this.rbStockMore = new System.Windows.Forms.RadioButton();
+            this.rbSalesAmountLess = new System.Windows.Forms.RadioButton();
+            this.rbSalesAmountEqual = new System.Windows.Forms.RadioButton();
+            this.rbSalesAmountMore = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -68,26 +68,26 @@ namespace StockTracking
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewSales = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.checkBoxDate);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dateTimePickerFinish);
+            this.panel1.Controls.Add(this.dateTimePickerStart);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.btnClean);
             this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.textBoxSalesAmount);
+            this.panel1.Controls.Add(this.txtBoxSalesAmount);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox1);
@@ -101,7 +101,7 @@ namespace StockTracking
             this.panel1.Controls.Add(this.txtCustomerName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(836, 136);
             this.panel1.TabIndex = 0;
@@ -109,8 +109,8 @@ namespace StockTracking
             // checkBoxDate
             // 
             this.checkBoxDate.AutoSize = true;
-            this.checkBoxDate.Location = new System.Drawing.Point(434, 115);
-            this.checkBoxDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxDate.Location = new System.Drawing.Point(480, 114);
+            this.checkBoxDate.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDate.Name = "checkBoxDate";
             this.checkBoxDate.Size = new System.Drawing.Size(104, 17);
             this.checkBoxDate.TabIndex = 25;
@@ -121,27 +121,27 @@ namespace StockTracking
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(251, 116);
+            this.label7.Location = new System.Drawing.Point(280, 116);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 17);
             this.label7.TabIndex = 24;
             this.label7.Text = "hasta";
             // 
-            // dateTimePicker2
+            // dateTimePickerFinish
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(289, 114);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(133, 20);
-            this.dateTimePicker2.TabIndex = 23;
+            this.dateTimePickerFinish.Location = new System.Drawing.Point(328, 114);
+            this.dateTimePickerFinish.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerFinish.Name = "dateTimePickerFinish";
+            this.dateTimePickerFinish.Size = new System.Drawing.Size(133, 20);
+            this.dateTimePickerFinish.TabIndex = 23;
             // 
-            // dateTimePicker1
+            // dateTimePickerStart
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 114);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(133, 20);
-            this.dateTimePicker1.TabIndex = 22;
+            this.dateTimePickerStart.Location = new System.Drawing.Point(142, 114);
+            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(133, 20);
+            this.dateTimePickerStart.TabIndex = 22;
             // 
             // label6
             // 
@@ -162,6 +162,7 @@ namespace StockTracking
             this.btnClean.TabIndex = 20;
             this.btnClean.Text = "Limpiar";
             this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // btnSearch
             // 
@@ -172,37 +173,38 @@ namespace StockTracking
             this.btnSearch.TabIndex = 19;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBoxSalesAmount
+            // txtBoxSalesAmount
             // 
-            this.textBoxSalesAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSalesAmount.Location = new System.Drawing.Point(510, 63);
-            this.textBoxSalesAmount.Name = "textBoxSalesAmount";
-            this.textBoxSalesAmount.Size = new System.Drawing.Size(124, 26);
-            this.textBoxSalesAmount.TabIndex = 18;
+            this.txtBoxSalesAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxSalesAmount.Location = new System.Drawing.Point(510, 63);
+            this.txtBoxSalesAmount.Name = "txtBoxSalesAmount";
+            this.txtBoxSalesAmount.Size = new System.Drawing.Size(124, 26);
+            this.txtBoxSalesAmount.TabIndex = 18;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(399, 67);
+            this.label5.Location = new System.Drawing.Point(363, 67);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 20);
+            this.label5.Size = new System.Drawing.Size(132, 20);
             this.label5.TabIndex = 17;
-            this.label5.Text = "Cantidad vendidas";
+            this.label5.Text = "Cantidad vendida";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.rbStockLess);
-            this.groupBox3.Controls.Add(this.rbStockEqual);
-            this.groupBox3.Controls.Add(this.rbStockMore);
+            this.groupBox3.Controls.Add(this.rbSalesAmountLess);
+            this.groupBox3.Controls.Add(this.rbSalesAmountEqual);
+            this.groupBox3.Controls.Add(this.rbSalesAmountMore);
             this.groupBox3.Location = new System.Drawing.Point(643, 54);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(183, 44);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Cantidad en almacen";
+            this.groupBox3.Text = "Cantidad Vendida";
             // 
             // groupBox4
             // 
@@ -249,38 +251,38 @@ namespace StockTracking
             this.radioButton6.Text = "Mas ";
             this.radioButton6.UseVisualStyleBackColor = true;
             // 
-            // rbStockLess
+            // rbSalesAmountLess
             // 
-            this.rbStockLess.AutoSize = true;
-            this.rbStockLess.Location = new System.Drawing.Point(121, 19);
-            this.rbStockLess.Name = "rbStockLess";
-            this.rbStockLess.Size = new System.Drawing.Size(57, 17);
-            this.rbStockLess.TabIndex = 2;
-            this.rbStockLess.TabStop = true;
-            this.rbStockLess.Text = "Menos";
-            this.rbStockLess.UseVisualStyleBackColor = true;
+            this.rbSalesAmountLess.AutoSize = true;
+            this.rbSalesAmountLess.Location = new System.Drawing.Point(121, 19);
+            this.rbSalesAmountLess.Name = "rbSalesAmountLess";
+            this.rbSalesAmountLess.Size = new System.Drawing.Size(57, 17);
+            this.rbSalesAmountLess.TabIndex = 2;
+            this.rbSalesAmountLess.TabStop = true;
+            this.rbSalesAmountLess.Text = "Menos";
+            this.rbSalesAmountLess.UseVisualStyleBackColor = true;
             // 
-            // rbStockEqual
+            // rbSalesAmountEqual
             // 
-            this.rbStockEqual.AutoSize = true;
-            this.rbStockEqual.Location = new System.Drawing.Point(17, 19);
-            this.rbStockEqual.Name = "rbStockEqual";
-            this.rbStockEqual.Size = new System.Drawing.Size(48, 17);
-            this.rbStockEqual.TabIndex = 1;
-            this.rbStockEqual.TabStop = true;
-            this.rbStockEqual.Text = "Igual";
-            this.rbStockEqual.UseVisualStyleBackColor = true;
+            this.rbSalesAmountEqual.AutoSize = true;
+            this.rbSalesAmountEqual.Location = new System.Drawing.Point(17, 19);
+            this.rbSalesAmountEqual.Name = "rbSalesAmountEqual";
+            this.rbSalesAmountEqual.Size = new System.Drawing.Size(48, 17);
+            this.rbSalesAmountEqual.TabIndex = 1;
+            this.rbSalesAmountEqual.TabStop = true;
+            this.rbSalesAmountEqual.Text = "Igual";
+            this.rbSalesAmountEqual.UseVisualStyleBackColor = true;
             // 
-            // rbStockMore
+            // rbSalesAmountMore
             // 
-            this.rbStockMore.AutoSize = true;
-            this.rbStockMore.Location = new System.Drawing.Point(74, 19);
-            this.rbStockMore.Name = "rbStockMore";
-            this.rbStockMore.Size = new System.Drawing.Size(48, 17);
-            this.rbStockMore.TabIndex = 0;
-            this.rbStockMore.TabStop = true;
-            this.rbStockMore.Text = "Mas ";
-            this.rbStockMore.UseVisualStyleBackColor = true;
+            this.rbSalesAmountMore.AutoSize = true;
+            this.rbSalesAmountMore.Location = new System.Drawing.Point(74, 19);
+            this.rbSalesAmountMore.Name = "rbSalesAmountMore";
+            this.rbSalesAmountMore.Size = new System.Drawing.Size(48, 17);
+            this.rbSalesAmountMore.TabIndex = 0;
+            this.rbSalesAmountMore.TabStop = true;
+            this.rbSalesAmountMore.Text = "Mas ";
+            this.rbSalesAmountMore.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -387,7 +389,7 @@ namespace StockTracking
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(399, 21);
+            this.label4.Location = new System.Drawing.Point(363, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 12;
@@ -397,7 +399,7 @@ namespace StockTracking
             // 
             this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(114, 66);
+            this.cmbCategory.Location = new System.Drawing.Point(142, 66);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(133, 28);
             this.cmbCategory.TabIndex = 9;
@@ -415,7 +417,7 @@ namespace StockTracking
             // txtProductName
             // 
             this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductName.Location = new System.Drawing.Point(114, 38);
+            this.txtProductName.Location = new System.Drawing.Point(142, 38);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(133, 26);
             this.txtProductName.TabIndex = 5;
@@ -443,7 +445,7 @@ namespace StockTracking
             // txtCustomerName
             // 
             this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(114, 11);
+            this.txtCustomerName.Location = new System.Drawing.Point(142, 11);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(133, 26);
             this.txtCustomerName.TabIndex = 2;
@@ -456,7 +458,7 @@ namespace StockTracking
             this.panel2.Controls.Add(this.btnNew);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 355);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(836, 81);
             this.panel2.TabIndex = 1;
@@ -503,31 +505,32 @@ namespace StockTracking
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // dataGridView1
+            // dataGridViewSales
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 136);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(836, 219);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridViewSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewSales.Location = new System.Drawing.Point(0, 136);
+            this.dataGridViewSales.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewSales.Name = "dataGridViewSales";
+            this.dataGridViewSales.ReadOnly = true;
+            this.dataGridViewSales.RowTemplate.Height = 24;
+            this.dataGridViewSales.Size = new System.Drawing.Size(836, 219);
+            this.dataGridViewSales.TabIndex = 2;
             // 
             // FrmSalesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 436);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewSales);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmSalesList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de ventas";
+            this.Load += new System.EventHandler(this.FrmSalesList_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -539,7 +542,7 @@ namespace StockTracking
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSales)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -548,7 +551,7 @@ namespace StockTracking
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewSales;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnCerrar;
@@ -571,20 +574,20 @@ namespace StockTracking
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBoxDate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFinish;
+        private System.Windows.Forms.DateTimePicker dateTimePickerStart;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBoxSalesAmount;
+        private System.Windows.Forms.TextBox txtBoxSalesAmount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton rbStockLess;
-        private System.Windows.Forms.RadioButton rbStockEqual;
-        private System.Windows.Forms.RadioButton rbStockMore;
+        private System.Windows.Forms.RadioButton rbSalesAmountLess;
+        private System.Windows.Forms.RadioButton rbSalesAmountEqual;
+        private System.Windows.Forms.RadioButton rbSalesAmountMore;
     }
 }
