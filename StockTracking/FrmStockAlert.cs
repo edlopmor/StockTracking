@@ -78,6 +78,10 @@ namespace StockTracking
             frm.productoSeleccionado = productoSelecionado;
             this.Hide();
             frm.ShowDialog();
+            this.Visible = true;
+            bll = new ProductBLL();
+            dto = bll.select();
+            
         }
     }
 }

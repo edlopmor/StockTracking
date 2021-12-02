@@ -16,6 +16,9 @@ namespace StockTracking
     {
         SalesBLL bll = new SalesBLL();
         SalesDTO dto = new SalesDTO();
+        SalesDetailDto salesSeleccionado = new SalesDetailDto();
+
+        bool primeraCarga = true; 
         public FrmSalesList()
         {
             InitializeComponent();
@@ -45,6 +48,8 @@ namespace StockTracking
             cmbCategory.DisplayMember = "CategoryName";
             cmbCategory.ValueMember = "ID";
             cmbCategory.SelectedIndex = -1;
+
+            primeraCarga = false;
 
         }
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -135,6 +140,51 @@ namespace StockTracking
             dateTimePickerFinish.Value = DateTime.Today;
             dateTimePickerStart.Value = DateTime.Today;
             checkBoxDate.Checked = false;
+        }
+
+        private void dataGridViewSales_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //0-SalesID 1-CustomerName 2-ProductName 3-CategoryName 4-CustomerId 5-ProductId 6-CategoryId 7-SalesAmount 8-Price 9-SalesDate 10-StockAmount
+            if (!primeraCarga)
+            {
+                //Capturamos del grid , todos los datos que vamos a usar para autorellenar el formulario de Ventas. 
+                salesSeleccionado = new SalesDetailDto();
+                salesSeleccionado.SalesID = Convert.ToInt32(dataGridViewSales.Rows[e.RowIndex].Cells[0].Value);
+                salesSeleccionado.CustomerName = dataGridViewSales.Rows[e.RowIndex].Cells[1].Value.ToString();
+                salesSeleccionado.ProductName = dataGridViewSales.Rows[e.RowIndex].Cells[2].Value.ToString();
+                salesSeleccionado.CustomerID = Convert.ToInt32(dataGridViewSales.Rows[e.RowIndex].Cells[4].Value);
+                salesSeleccionado.CategoryID = Convert.ToInt32(dataGridViewSales.Rows[e.RowIndex].Cells[6].Value);
+                salesSeleccionado.ProductID = Convert.ToInt32(dataGridViewSales.Rows[e.RowIndex].Cells[5].Value);
+                salesSeleccionado.SalesAmount = Convert.ToInt32(dataGridViewSales.Rows[e.RowIndex].Cells[7].Value);
+                salesSeleccionado.Price= Convert.ToInt32(dataGridViewSales.Rows[e.RowIndex].Cells[8].Value);
+                salesSeleccionado.StockAmount= Convert.ToInt32(dataGridViewSales.Rows[e.RowIndex].Cells[10].Value);
+              
+            }
+            
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if(salesSeleccionado.SalesID == 0)
+            {
+                MessageBox.Show("Debe seleccionar una venta para actualizarla");
+            }
+            else
+            {
+                FrmSales frm = new FrmSales();
+                this.Hide();
+                frm.dto = dto;
+                frm.isUpdate = true;
+                frm.salesSeleccionado = salesSeleccionado;
+                frm.ShowDialog();
+                this.Visible = true;
+
+                bll = new SalesBLL();
+                dto = bll.select();
+                dataGridViewSales.DataSource = dto.Sales;
+                CleanFilters();
+            }
+            
         }
     }
 }

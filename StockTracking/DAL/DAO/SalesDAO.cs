@@ -52,6 +52,7 @@ namespace StockTracking.DAL.DAO
                                 categoryId = s.category_Id,
                                 salesPrice = s.productSalesPrice,
                                 salesAmount = s.productSalesAmount,
+                                stockAmount = p.stockAmount,
                                 salesDate = s.salesDate,
                                 productId = p.IdProduct,
                                 customerId = c.IdCustomer,
@@ -66,6 +67,7 @@ namespace StockTracking.DAL.DAO
                     dto.CategoryID = Convert.ToInt32(item.categoryId);
                     dto.Price = Convert.ToInt32(item.salesPrice);
                     dto.SalesAmount = Convert.ToInt32(item.salesAmount);
+                    dto.StockAmount = Convert.ToInt32(item.stockAmount);
                     dto.SalesDate = Convert.ToDateTime(item.salesDate);
                     dto.ProductID = Convert.ToInt32(item.productId);
                     dto.CustomerID = Convert.ToInt32(item.customerId);
@@ -84,7 +86,19 @@ namespace StockTracking.DAL.DAO
 
         public bool Update(SALE entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                SALE sales = db.SALES.First(x => x.id == entity.id);
+                sales.productSalesAmount = entity.productSalesAmount;
+                db.SaveChanges();
+                return true; 
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

@@ -17,11 +17,11 @@ namespace StockTracking
     {
         public SalesDTO dto = new SalesDTO();
         SalesBLL bll = new SalesBLL();
-        SalesDetailDto productSeleccionado = new SalesDetailDto();
-
-
+        public SalesDetailDto salesSeleccionado = new SalesDetailDto();
+        public bool isUpdate = false; 
         bool comboFull = false;
         bool primerCarga = true; 
+
         public FrmSales()
         {
             InitializeComponent();
@@ -50,22 +50,31 @@ namespace StockTracking
             cmbCategory.DisplayMember = "CategoryName";
             cmbCategory.ValueMember = "ID";
             cmbCategory.SelectedIndex = -1;
-            
-            dataGridProducts.DataSource = dto.Products;
-            dataGridProducts.Columns[0].Visible = false; //Product ID 
-            dataGridProducts.Columns[1].HeaderText = "Nombre producto";
-            dataGridProducts.Columns[2].HeaderText = "Nombre categoria";
-            dataGridProducts.Columns[3].HeaderText = "Cantidad almacenada";
-            dataGridProducts.Columns[4].HeaderText = "Precio";
-            dataGridProducts.Columns[5].Visible = false; //Category ID 
-
-            dataGridViewCustomers.DataSource = dto.Customers;
-            dataGridViewCustomers.Columns[0].Visible = false;
-            dataGridViewCustomers.Columns[1].HeaderText = "Nombre customers";
-            
-            if(dto.Categories.Count > 0)
+            if (!isUpdate)
             {
-                comboFull = true;
+                dataGridProducts.DataSource = dto.Products;
+                dataGridProducts.Columns[0].Visible = false; //Product ID 
+                dataGridProducts.Columns[1].HeaderText = "Nombre producto";
+                dataGridProducts.Columns[2].HeaderText = "Nombre categoria";
+                dataGridProducts.Columns[3].HeaderText = "Cantidad almacenada";
+                dataGridProducts.Columns[4].HeaderText = "Precio";
+                dataGridProducts.Columns[5].Visible = false; //Category ID 
+
+                dataGridViewCustomers.DataSource = dto.Customers;
+                dataGridViewCustomers.Columns[0].Visible = false;
+                dataGridViewCustomers.Columns[1].HeaderText = "Nombre customers";
+                if (dto.Categories.Count > 0)                
+                    comboFull = true;              
+            }                                   
+            else
+            {
+                btnSave.Text = "Actualizar";
+                panel1.Hide();
+                txtCustomerName.Text = salesSeleccionado.CustomerName;
+                txtProductName.Text = salesSeleccionado.ProductName;
+                txtPrice.Text = salesSeleccionado.Price.ToString();               
+                txtSalesAmount.Text = salesSeleccionado.SalesAmount.ToString();
+                txtQuantityStock.Text = salesSeleccionado.StockAmount.ToString();
             }
             primerCarga = false; 
 
@@ -75,15 +84,15 @@ namespace StockTracking
         {
             if (!primerCarga)
             {
-                productSeleccionado.ProductName = dataGridProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
-                productSeleccionado.Price = Convert.ToInt32(dataGridProducts.Rows[e.RowIndex].Cells[4].Value);
-                productSeleccionado.StockAmount = Convert.ToInt32(dataGridProducts.Rows[e.RowIndex].Cells[3].Value);
-                productSeleccionado.ProductID = Convert.ToInt32(dataGridProducts.Rows[e.RowIndex].Cells[0].Value);
-                productSeleccionado.CategoryID = Convert.ToInt32(dataGridProducts.Rows[e.RowIndex].Cells[5].Value);
+                salesSeleccionado.ProductName = dataGridProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
+                salesSeleccionado.Price = Convert.ToInt32(dataGridProducts.Rows[e.RowIndex].Cells[4].Value);
+                salesSeleccionado.StockAmount = Convert.ToInt32(dataGridProducts.Rows[e.RowIndex].Cells[3].Value);
+                salesSeleccionado.ProductID = Convert.ToInt32(dataGridProducts.Rows[e.RowIndex].Cells[0].Value);
+                salesSeleccionado.CategoryID = Convert.ToInt32(dataGridProducts.Rows[e.RowIndex].Cells[5].Value);
 
-                txtProductName.Text = productSeleccionado.ProductName;
-                txtPrice.Text = productSeleccionado.Price.ToString();
-                txtQuantityStock.Text = productSeleccionado.StockAmount.ToString();
+                txtProductName.Text = salesSeleccionado.ProductName;
+                txtPrice.Text = salesSeleccionado.Price.ToString();
+                txtQuantityStock.Text = salesSeleccionado.StockAmount.ToString();
             }
             
             
@@ -93,9 +102,9 @@ namespace StockTracking
         {
             if (!primerCarga)
             {
-                productSeleccionado.CustomerName = dataGridViewCustomers.Rows[e.RowIndex].Cells[1].Value.ToString();
-                productSeleccionado.CustomerID =  Convert.ToInt32(dataGridViewCustomers.Rows[e.RowIndex].Cells[0].Value);
-                txtCustomerName.Text = productSeleccionado.CustomerName;
+                salesSeleccionado.CustomerName = dataGridViewCustomers.Rows[e.RowIndex].Cells[1].Value.ToString();
+                salesSeleccionado.CustomerID =  Convert.ToInt32(dataGridViewCustomers.Rows[e.RowIndex].Cells[0].Value);
+                txtCustomerName.Text = salesSeleccionado.CustomerName;
             }
         }
 
@@ -126,32 +135,58 @@ namespace StockTracking
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (productSeleccionado.ProductID == 0)
-                MessageBox.Show("Seleccione un producto");
-            else if (productSeleccionado.CustomerID == 0)
-                MessageBox.Show("Seleccione un cliente");
-            else if (productSeleccionado.StockAmount < Convert.ToInt32(txtSalesAmount.Text))
-                MessageBox.Show("No se puede vender mayor cantidad de la que se encuentra en el almacen");
-            else
-            {
-                productSeleccionado.SalesAmount = Convert.ToInt32(txtSalesAmount.Text);
-                productSeleccionado.SalesDate = DateTime.Today;
-                if (bll.Insert(productSeleccionado))
+        {           
+                if (!isUpdate) //Añadir nuevo Sale
                 {
-                    MessageBox.Show("Venta añadida con exito");
-                    bll = new SalesBLL();
-                    dto = bll.select();
-                    dataGridProducts.DataSource = dto.Products;
-                    comboFull = false;
+                    if (salesSeleccionado.ProductID == 0)
+                        MessageBox.Show("Seleccione un producto");
+                    else if (salesSeleccionado.CustomerID == 0)
+                        MessageBox.Show("Seleccione un cliente");
+                    else if (salesSeleccionado.StockAmount < Convert.ToInt32(txtSalesAmount.Text))
+                        MessageBox.Show("No se puede vender mayor cantidad de la que se encuentra en el almacen");
+                    else
+                    {
+                        salesSeleccionado.SalesAmount = Convert.ToInt32(txtSalesAmount.Text);
+                        salesSeleccionado.SalesDate = DateTime.Today;
+                        if (bll.Insert(salesSeleccionado))
+                        {
+                            MessageBox.Show("Venta añadida con exito");
+                            bll = new SalesBLL();
+                            dto = bll.select();
+                            dataGridProducts.DataSource = dto.Products;
+                            comboFull = false;
 
-                    cmbCategory.DataSource = dto.Categories;
-                    if (dto.Products.Count > 0)
-                        comboFull = true;
-                    txtSalesAmount.Clear();
+                            cmbCategory.DataSource = dto.Categories;
+                            if (dto.Products.Count > 0)
+                                comboFull = true;
+                            txtSalesAmount.Clear();
+                        }
+                    }
+                   
                 }
+                else //Actualizar 
+                {
+                if (salesSeleccionado.SalesAmount == Convert.ToInt32(txtSalesAmount.Text))
+                    MessageBox.Show("No has realizado cambios");
+                else
+                {
+                    int temp = salesSeleccionado.StockAmount + salesSeleccionado.SalesAmount;
+                    if (temp < Convert.ToInt32(txtSalesAmount.Text))
+                        MessageBox.Show("No hay suficientes articulos para modificar la venta");
+                    else
+                    {
+                        salesSeleccionado.SalesAmount = Convert.ToInt32(txtSalesAmount.Text);
+                        salesSeleccionado.StockAmount = temp - salesSeleccionado.SalesAmount;
+                        if (bll.Update(salesSeleccionado))
+                        {
+                            MessageBox.Show("Venta actualizada correctamente");
+                            this.Close();
+                        }                        
+                    }
+                }
+                }
+                                
             }
-
         }
     }
-}
+
