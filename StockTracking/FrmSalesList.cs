@@ -186,5 +186,24 @@ namespace StockTracking
             }
             
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (salesSeleccionado.SalesID == 0)
+                MessageBox.Show("Por favor selecciona una venta para eliminarla");
+            else
+            {
+                DialogResult result = MessageBox.Show("Estas seguro de eliminar la venta", "Warning", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                    if (bll.Delete(salesSeleccionado))
+                    {
+                        MessageBox.Show("Sales was deleted");
+                        bll = new SalesBLL();
+                        dto = bll.select();
+                        dataGridViewSales.DataSource = dto.Sales;
+                        CleanFilters();
+                    }
+            }
+        }
     }
 }

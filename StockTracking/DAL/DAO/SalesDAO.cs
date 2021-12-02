@@ -12,7 +12,19 @@ namespace StockTracking.DAL.DAO
     {
         public bool Delete(SALE entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                SALE sale = db.SALES.First(x => x.id == entity.id);
+                sale.isDeleted = true;
+                sale.deletedDate = DateTime.Today;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public bool GetBack(int ID)
@@ -40,7 +52,7 @@ namespace StockTracking.DAL.DAO
             try
             {
                 List<SalesDetailDto> sales = new List<SalesDetailDto>();
-                var list = (from s in db.SALES
+                var list = (from s in db.SALES.Where(x => x.isDeleted == null || x.isDeleted == false)
                             join p in db.PRODUCTS on s.product_Id equals p.IdProduct
                             join c in db.CUSTOMERS on s.customer_Id equals c.IdCustomer
                             join category in db.CATEGORYS on s.category_Id equals category.IdCategory

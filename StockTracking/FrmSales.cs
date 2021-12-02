@@ -160,6 +160,7 @@ namespace StockTracking
                             if (dto.Products.Count > 0)
                                 comboFull = true;
                             txtSalesAmount.Clear();
+                            
                         }
                     }
                    

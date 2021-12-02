@@ -19,7 +19,16 @@ namespace StockTracking.BLL
 
         public bool Delete(SalesDetailDto entity)
         {
-            throw new NotImplementedException();
+            SALE sale = new SALE();
+            sale.id = entity.SalesID;
+            salesDAO.Delete(sale);
+
+            PRODUCT product = new PRODUCT();
+            product.IdProduct = entity.ProductID;
+            product.stockAmount = entity.StockAmount + entity.SalesAmount;
+            productDAO.Update(product);
+
+            return true;
         }
 
         public bool GetBack(SalesDetailDto entity)
@@ -36,6 +45,7 @@ namespace StockTracking.BLL
             sale.productSalesPrice = entity.Price;
             sale.productSalesAmount = entity.SalesAmount;
             sale.salesDate = entity.SalesDate;
+            sale.isDeleted = false; 
             salesDAO.Insert(sale);
 
             //Actualizar el producto a la resta de la cantidad total - cantidad vendida

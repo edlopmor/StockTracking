@@ -80,14 +80,12 @@ namespace StockTracking.DAL.DAO
                 //Añadir Stock
                 if (entity.categoryId == 0)
                 {
-                    product.stockAmount = entity.stockAmount;
-                   
-
+                    product.stockAmount = entity.stockAmount;                   
                 }
                 else //Actualizacion de producto 
                 {
-                    product.productName = entity.productName;
-                    product.price = entity.price;
+                    
+                   
                     product.categoryId = entity.categoryId;
 
                 }
