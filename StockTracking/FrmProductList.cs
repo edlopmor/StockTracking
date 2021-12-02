@@ -160,5 +160,26 @@ namespace StockTracking
                 CleanFilters();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (productoSeleccionado.ID == 0)
+                MessageBox.Show("Por favor seleccione un producto para ser eliminado");
+            else
+            {
+                DialogResult result = MessageBox.Show("Desea eliminar este producto", "Warning", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    if (bll.Delete(productoSeleccionado))
+                    {
+                        MessageBox.Show("Producto eliminado con exito");
+                        bll = new ProductBLL();
+                        dto = bll.select();
+                        dataGridViewProducts.DataSource = dto.Products;
+
+                    }
+                }
+            }
+        }
     }   
 }

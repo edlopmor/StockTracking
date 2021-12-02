@@ -13,10 +13,22 @@ namespace StockTracking.BLL
     class ProductBLL : IBLL<ProductDetailDTO, ProductDTO>
     {
         CategoryDAO categoryDao = new CategoryDAO();
-        ProductDAO dao = new ProductDAO();
+        ProductDAO dao = new ProductDAO(); 
+        SalesDAO salesDAO = new SalesDAO();
+
         public bool Delete(ProductDetailDTO entity)
         {
-            throw new NotImplementedException();
+            PRODUCT product = new PRODUCT();
+            product.IdProduct = entity.ID;
+            dao.Delete(product);
+
+            //Al eliminar un producto debemos eliminar una venta en la que este ese producto 
+            SALE sale = new SALE();
+            sale.product_Id = entity.ID;
+            salesDAO.Delete(sale);
+
+            return true; 
+
         }
 
         public bool GetBack(ProductDetailDTO entity)
