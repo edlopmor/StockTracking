@@ -15,6 +15,10 @@ namespace StockTracking
     {
         ProductBLL bll = new ProductBLL();
         ProductDTO dto = new ProductDTO();
+        ProductDetailDTO productoSeleccionado = new ProductDetailDTO();
+
+        bool primeraCarga = true;
+        
         public FrmProductList()
         {
             InitializeComponent();
@@ -69,6 +73,7 @@ namespace StockTracking
             dataGridViewProducts.Columns[4].HeaderText = "Precio";
             dataGridViewProducts.Columns[5].Visible = false; //Category ID 
 
+            primeraCarga = false; 
 
         }
 
@@ -124,5 +129,36 @@ namespace StockTracking
             rbStockLess.Checked = false;
             rbStockMore.Checked = false;
         }
-    }
+
+        private void dataGridViewProducts_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!primeraCarga)
+            {
+                productoSeleccionado = new ProductDetailDTO();
+                productoSeleccionado.ID = Convert.ToInt32(dataGridViewProducts.Rows[e.RowIndex].Cells[0].Value.ToString());
+                productoSeleccionado.ProductName = dataGridViewProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
+                productoSeleccionado.CategoryID = Convert.ToInt32(dataGridViewProducts.Rows[e.RowIndex].Cells[5].Value.ToString());
+                productoSeleccionado.Price = Convert.ToInt32(dataGridViewProducts.Rows[e.RowIndex].Cells[4].Value.ToString());
+            }                                
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (productoSeleccionado.ID == 0)
+                MessageBox.Show("Seleccione un producto para modificarlo");
+            else
+            {
+                FrmProduct frm = new FrmProduct();
+                frm.dto = dto;
+                frm.productoSeleccionado = productoSeleccionado;
+                frm.isUpdate = true; 
+                this.Hide();
+                frm.ShowDialog();
+                this.Visible = true;
+                dto = bll.select();
+                dataGridViewProducts.DataSource = dto.Products;
+                CleanFilters();
+            }
+        }
+    }   
 }

@@ -60,7 +60,7 @@ namespace StockTracking
                 comboFull = true;
             if (isUpdate)
             {
-                cmbCategory.SelectedValue = productoSeleccionado.CategoryName;
+                cmbCategory.SelectedValue = productoSeleccionado.CategoryID;
                 txtPrice.Text = productoSeleccionado.Price.ToString();
                 txtProductName.Text = productoSeleccionado.ProductName;
             }

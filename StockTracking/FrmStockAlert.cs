@@ -65,7 +65,8 @@ namespace StockTracking
                 productoSelecionado.CategoryName = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 productoSelecionado.StockAmount = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
                 productoSelecionado.Price = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString());
-                productoSelecionado.CategoryID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+                //No pasamos el category ID 
+                //productoSelecionado.CategoryID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
                 btnGiveMeStock.Visible = true;
             }
         }
