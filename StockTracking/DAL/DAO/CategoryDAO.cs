@@ -11,7 +11,11 @@ namespace StockTracking.DAL.DAO
     {
         public bool Delete(CATEGORY entity)
         {
-            throw new NotImplementedException();
+            CATEGORY category = db.CATEGORYS.First(x => x.IdCategory == entity.IdCategory);
+            category.isDeleted = true;
+            category.deletedDate = DateTime.Today;
+            db.SaveChanges();
+            return true; 
         }
 
         public bool GetBack(int ID)
@@ -37,7 +41,7 @@ namespace StockTracking.DAL.DAO
         public List<CategoryDetailDTO> Select()
         {
             List<CategoryDetailDTO> categories = new List<CategoryDetailDTO>();
-            var list = db.CATEGORYS;
+            var list = db.CATEGORYS.Where(x => x.isDeleted==false);
             foreach (var item in list)
             {
                 CategoryDetailDTO dto = new CategoryDetailDTO();

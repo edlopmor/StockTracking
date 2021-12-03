@@ -90,5 +90,25 @@ namespace StockTracking
             
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (categoriaSeleccionada.ID == 0)
+                MessageBox.Show("Por favor seleccione una categoria para eliminarla");
+            else
+            {
+                DialogResult resultado = MessageBox.Show($"Estas seguro de eliminar : {categoriaSeleccionada.CategoryName} ", "Warning", MessageBoxButtons.YesNo);
+                if(resultado == DialogResult.Yes)
+                {
+                    if (bll.Delete(categoriaSeleccionada))
+                    {
+                        MessageBox.Show("Categoria eliminada correctamente");
+                        dto = bll.select();
+                        dataGridViewEmployees.DataSource = dto.categories;
+                        txtBCategoryName.Clear();
+                    }
+                }
+            }
+        }
     }
 }
