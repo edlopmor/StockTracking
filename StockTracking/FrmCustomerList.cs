@@ -87,5 +87,27 @@ namespace StockTracking
             
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (customerSeleccionado.ID == 0)
+                MessageBox.Show("Debe seleccionar un cliente para eliminarlo");
+            else
+            {
+                DialogResult resultado = MessageBox.Show($"Esta seguro de eliminar este cliente: {customerSeleccionado.CustomerName}", "Warning", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    if (bll.Delete(customerSeleccionado))
+                    {
+                        MessageBox.Show("Cliente borrado correctamente");
+                        bll = new CustomerBLL();
+                        dto = bll.select();
+                        dataGridViewCustomers.DataSource = dto.Customers;
+                        txtCustomerName.Clear();
+                    }
+                                        
+                }
+            }
+        }
     }
 }
