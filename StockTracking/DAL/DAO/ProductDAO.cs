@@ -104,7 +104,41 @@ namespace StockTracking.DAL.DAO
                 throw ex;
             }
         }
+        public List<ProductDetailDTO> Select(bool isDeleted)
+        {
+            try
+            {
+                List<ProductDetailDTO> products = new List<ProductDetailDTO>();
+                var list = (from p in db.PRODUCTS.Where(x => x.isDeleted == isDeleted)
+                            join c in db.CATEGORYS on p.categoryId equals c.IdCategory
+                            select new
+                            {
+                                productName = p.productName,
+                                categoryName = c.categoryName,
+                                stockAmount = p.stockAmount,
+                                price = p.price,
+                                productID = p.IdProduct,
+                                categoryID = c.IdCategory
+                            }).OrderBy(x => x.productName).ToList();
+                foreach (var item in list)
+                {
+                    ProductDetailDTO dto = new ProductDetailDTO();
+                    dto.ID = item.productID;
+                    dto.ProductName = item.productName;
+                    dto.CategoryName = item.categoryName;
+                    dto.StockAmount = item.stockAmount;
+                    dto.Price = item.price;
+                    dto.CategoryID = item.categoryID;
+                    products.Add(dto);
+                }
+                return products;
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+        }
         public bool Update(PRODUCT entity)
         {
             try

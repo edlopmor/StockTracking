@@ -15,7 +15,7 @@ namespace StockTracking.BLL
         ProductDAO productDAO = new ProductDAO();
         CategoryDAO categoryDAO = new CategoryDAO();
         CustomerDAO customerDAO = new CustomerDAO();
-
+        public Boolean estoesFalso = true;
 
         public bool Delete(SalesDetailDto entity)
         {
@@ -66,6 +66,17 @@ namespace StockTracking.BLL
             dto.Customers = customerDAO.Select();
             dto.Categories = categoryDAO.Select();
             dto.Sales = salesDAO.Select();
+
+            return dto;
+
+        }
+        public SalesDTO select(bool isDeleted)
+        {
+            SalesDTO dto = new SalesDTO();
+            dto.Products = productDAO.Select(isDeleted);
+            dto.Customers = customerDAO.Select(isDeleted);
+            dto.Categories = categoryDAO.Select(isDeleted);
+            dto.Sales = salesDAO.Select(isDeleted);
 
             return dto;
 
